@@ -39,6 +39,7 @@ CONFIG = {
         "score_label": "Good Score!",
         "score": 66,
         "suggestions": "",
+        "showScore": False,
         "showStatus": False,
         "showPhrasingAlert": False,
         "showSuggestions": False,
@@ -66,7 +67,8 @@ async def fetchSuggestions(state):
         f"block of text. Do not include a new version of the submitted "
         f"answer. Do not include any lists. The summary text should "
         f"start with 'To improve your answer, think about ', "
-        f"Approved answer: {state['answer']} Submitted answer: {state['attempt']}"
+        f"Approved answer: {state['answer']} "
+        f"Submitted answer: {state['attempt']}"
     )
     try:
         completion = await openAIclient.chat.completions.create(
@@ -122,6 +124,7 @@ def printScoreCard(state):
     )
     state["score"] = int(raw_score[0] * 100)
     state["score_label"] = getScoreLabel(state["score"])
+    state["showScore"] = True
 
     return (
         f"<div class='center-box'>"
@@ -148,7 +151,7 @@ def printForbiddenBox(state):
                 f"<div class='feedback-head'>Demo Alert</div>"
                 f"{CONFIG['demo_text_alert']}"
                 f"</div>"
-            )    
+            )
         else:
             return ""
 
@@ -278,10 +281,10 @@ async def submit(attempt: str, state: dict):
         ),
         gr.update(  # score_box
             value=printScoreCard(state),
-            visible=True
+            visible=state["showScore"]
         ),
         gr.update(  # suggestion_box
-            value= await printSuggestionsBox(state),
+            value=await printSuggestionsBox(state),
             visible=state['showSuggestions']
         )
     )
@@ -294,7 +297,7 @@ def reset_question(state: dict):
     )
     return (
         state,
-        gr.update(value=printQuestion(state)),
+        gr.update(value=printQuestion(state)),  # question_box
         gr.update(  # attempt_box
             value="",
             interactive=True,
