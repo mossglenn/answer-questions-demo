@@ -4,6 +4,8 @@ import random
 import copy
 import re
 from huggingface_hub import InferenceClient
+from openai import AsyncOpenAI, OpenAIError
+
 
 CONFIG = {
     "show_placeholder_text": True,
