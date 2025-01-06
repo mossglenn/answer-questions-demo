@@ -146,7 +146,7 @@ def printForbiddenBox(state):
             return (
                 f"<div class='feedback-card red-card'>"
                 f"<div class='feedback-head'>Demo Alert</div>"
-                f"{CONFIG["demo_text_alert"]}"
+                f"{CONFIG['demo_text_alert']}"
                 f"</div>"
             )    
         else:
