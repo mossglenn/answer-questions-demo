@@ -141,8 +141,8 @@ def printForbiddenBox(state):
     ]
     if not forbidden_matches:
         #  include demo text
-        if state["show_placeholder_text"]:
-            return state["demo_text_alert"]
+        if CONFIG["show_placeholder_text"]:
+            return CONFIG["demo_text_alert"]
         else:
             return ""
 
@@ -192,7 +192,7 @@ def printStatusBox(state):
 
 async def printSuggestionsBox(state):
     if state["local_only"]:
-        suggestion_message = state["demo_text_suggestions"]
+        suggestion_message = CONFIG["demo_text_suggestions"]
         state["showSuggestions"] = True
     else:
         state["suggestions"] = await fetchSuggestions(state)
