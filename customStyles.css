@@ -35,6 +35,10 @@
   border: 2px solid #8cc9ff;
 }
 
+.center-box {
+  margin:0 auto;
+}
+
 /* 
 * Score card styles here. 
 * Taken from https://codepen.io/alvaromontoro/pen/poWgdVV 
