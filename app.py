@@ -182,7 +182,7 @@ def printStatusBox(state):
 
 
 async def printSuggestionsBox(state):
-    suggestion_message = await fetchSuggestions(state)
+    state["suggestions"] = await fetchSuggestions(state)
     if state["suggestions"]:
         state["showSuggestions"] = True
         suggestion_message = state["suggestions"]
