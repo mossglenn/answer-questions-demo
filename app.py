@@ -3,6 +3,7 @@ import ast
 import random
 import copy
 import re
+import os
 from huggingface_hub import InferenceClient
 from openai import AsyncOpenAI, OpenAIError
 
@@ -39,12 +40,45 @@ CONFIG = {
     },
 }
 
+APIKEY = os.getenv('DEMOAPI')
+
 client = InferenceClient()
 
 # Load FAQ and select a random entry
 with open('faq_dict.txt', 'r') as fd:
     faq = ast.literal_eval(fd.read())
 print('> FAQ loaded...')
+
+
+async def fetchSuggestions(state):
+    """Uses OpenAI API to summarize differences between two text blocks"""
+    print('> Requesting summary of differences...')
+    openAIclient = AsyncOpenAI()
+    prompt = (
+        f"Write a short paragraph summarizing the one or two most "
+        f"important ways that the submitted answer block of text below "
+        f"can be improved to become more similar to the approved answer "
+        f"block of text. Do not include a new version of the submitted "
+        f"answer. Do not include any lists. The summary text should "
+        f"start with 'To improve your answer, think about ', "
+        f"Approved answer: {state['answer']} Submitted answer: {state['submitted']}"
+    )
+    try:
+        completion = await openAIclient.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
+        )
+        print(">>>>> Summarized...")
+        return f"{completion.choices[0].message.content}"
+
+    except OpenAIError as e:
+        print(f"Error: {e}")
+        return (
+            "Sorry, an error occured while trying to generate a suggestion "
+            "for improvements to your answer."
+        )
 
 
 def getScoreLabel(score: int) -> str:
@@ -147,8 +181,8 @@ def printStatusBox(state):
         return ""
 
 
-def printSuggestionsBox(state):
-    suggestion_message = ""
+async def printSuggestionsBox(state):
+    suggestion_message = await fetchSuggestions(state)
     if state["suggestions"]:
         state["showSuggestions"] = True
         suggestion_message = state["suggestions"]
