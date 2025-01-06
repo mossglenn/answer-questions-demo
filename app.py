@@ -16,6 +16,11 @@ CONFIG = {
         "attached to this question in the copy repository, "
         "it would appear here."
     ),
+    "demo_text_alert": {
+        "This is placeholder text for demo only. To get a real result, try"
+        "including one or more of the following phrases in your answer:"
+        "<ul><li>research subject</li><li>human subjects</li></ul>"
+    },
     "demo_text_suggestions": (
         "This is placeholder text for demo only. If the app is connected to "
         "OpenAI, ChatGPT will write suggestions for how to rewrite the "
@@ -135,7 +140,11 @@ def printForbiddenBox(state):
         if re.search(rf"\b{re.escape(phrase)}\b", state['attempt'].lower())
     ]
     if not forbidden_matches:
-        return ""
+        #  include demo text
+        if state["show_placeholder_text"]:
+            return state["demo_text_alert"]
+        else:
+            return ""
 
     state['showPhrasingAlert'] = True
     alert_message = ""
@@ -182,13 +191,17 @@ def printStatusBox(state):
 
 
 async def printSuggestionsBox(state):
-    state["suggestions"] = await fetchSuggestions(state)
-    if state["suggestions"]:
+    if state["local_only"]:
+        suggestion_message = state["demo_text_suggestions"]
         state["showSuggestions"] = True
-        suggestion_message = state["suggestions"]
-    elif CONFIG["show_placeholder_text"]:
-        state["showSuggestions"] = True
-        suggestion_message = CONFIG["demo_text_suggestions"]
+    else:
+        state["suggestions"] = await fetchSuggestions(state)
+        if state["suggestions"]:
+            state["showSuggestions"] = True
+            suggestion_message = state["suggestions"]
+        elif CONFIG["show_placeholder_text"]:
+            state["showSuggestions"] = True
+            suggestion_message = CONFIG["demo_text_suggestions"]
 
     if state["showSuggestions"]:
         return (
