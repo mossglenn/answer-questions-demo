@@ -362,8 +362,8 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             status_box = gr.HTML(visible=False)
 
     with gr.Row():  # feedback row
-        with gr.Column():
-            score_box = gr.HTML(visible=False, elem_classes=["center-box"])
+        with gr.Column(elem_classes=["center-box"]):
+            score_box = gr.HTML(visible=False)
         with gr.Column():
             forbidden_box = gr.HTML(visible=False)
             suggestion_box = gr.HTML(visible=False)
