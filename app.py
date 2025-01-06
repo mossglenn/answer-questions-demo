@@ -191,7 +191,7 @@ def printStatusBox(state):
 
 
 async def printSuggestionsBox(state):
-    if state["local_only"]:
+    if CONFIG["local_only"]:
         suggestion_message = CONFIG["demo_text_suggestions"]
         state["showSuggestions"] = True
     else:
