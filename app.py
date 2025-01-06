@@ -3,7 +3,6 @@ import ast
 import random
 import copy
 import re
-import os
 from huggingface_hub import InferenceClient
 from openai import AsyncOpenAI, OpenAIError
 
@@ -46,9 +45,11 @@ CONFIG = {
     },
 }
 
-APIKEY = os.getenv('DEMOAPI')
-
-client = InferenceClient()
+try:
+    client = InferenceClient()
+except Exception as e:
+    print(f"Error initializing inference client: {e}")
+    client = None
 
 # Load FAQ and select a random entry
 with open('faq_dict.txt', 'r') as fd:
