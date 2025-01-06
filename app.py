@@ -61,7 +61,7 @@ async def fetchSuggestions(state):
         f"block of text. Do not include a new version of the submitted "
         f"answer. Do not include any lists. The summary text should "
         f"start with 'To improve your answer, think about ', "
-        f"Approved answer: {state['answer']} Submitted answer: {state['submitted']}"
+        f"Approved answer: {state['answer']} Submitted answer: {state['attempt']}"
     )
     try:
         completion = await openAIclient.chat.completions.create(
