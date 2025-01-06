@@ -142,7 +142,13 @@ def printForbiddenBox(state):
     if not forbidden_matches:
         #  include demo text
         if CONFIG["show_placeholder_text"]:
-            return CONFIG["demo_text_alert"]
+            state['showPhrasingAlert'] = True
+            return (
+                f"<div class='feedback-card red-card'>"
+                f"<div class='feedback-head'>Demo Alert</div>"
+                f"{CONFIG["demo_text_alert"]}"
+                f"</div>"
+            )    
         else:
             return ""
 
