@@ -228,7 +228,7 @@ def initialize_state_values():
     return state
 
 
-def submit(attempt: str, state: dict):
+async def submit(attempt: str, state: dict):
     state['attempt'] = attempt
     return (
         state,
@@ -262,7 +262,7 @@ def submit(attempt: str, state: dict):
             visible=True
         ),
         gr.update(  # suggestion_box
-            value=printSuggestionsBox(state),
+            value= await printSuggestionsBox(state),
             visible=state['showSuggestions']
         )
     )
