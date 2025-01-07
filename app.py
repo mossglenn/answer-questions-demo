@@ -123,9 +123,12 @@ def printScoreCard(state):
         other_sentences=[state["attempt"]],
         model="sentence-transformers/all-MiniLM-L6-v2"
     )
-    if raw_score < 0:
-        raw_score = 0
-    state["score"] = int(raw_score[0] * 100)
+    int_score = int(raw_score[0] * 100)
+    if int_score < 0:
+        state["score"] = 0
+    else:
+        state["score"] = int(raw_score[0] * 100)
+
     state["score_label"] = getScoreLabel(state["score"])
     state["showScore"] = True
 
