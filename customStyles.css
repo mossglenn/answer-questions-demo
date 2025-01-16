@@ -9,7 +9,9 @@
 }
 
 .info-question {
-  vertical-align: text-top;
+  vertical-align: top;
+  font-weight: 900;
+  color: orange;
 }
 
 .info-question:hover {
