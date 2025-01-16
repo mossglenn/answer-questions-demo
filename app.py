@@ -330,8 +330,8 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
     state = gr.State(value=initialize_state_values())
 
     gr.HTML("<h1 style='text-align:center;'>Answering Questions Demo</h1>")
-    gr.HTML("<h4>NB: This demo runs on minimal resources; getting the "
-            "response may take several seconds</h4>")
+    gr.HTML("<h4 style='text-align:center;'>NB: This demo runs on minimal "
+            "resources; getting the response may take several seconds</h4>")
 
     question_box = gr.HTML(
         value="<div class='initial-text'>Selecting a question...</div>"
