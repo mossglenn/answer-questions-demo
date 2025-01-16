@@ -376,15 +376,16 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             suggestion_box = gr.HTML(visible=False)
 
     gr.HTML(
-            "<p>This is a proof-of-concept demo for a learning activity. "
+            "<div style='line-height: 150%;'><p>"
+            "This is a proof-of-concept demo for a learning activity. "
             "A question is randomly "
-            "chosen from an official FAQ. The learner writes their response "
-            "in the textbox below the question. After the submit button is "
+            "chosen from an official FAQ and the learner writes their response"
+            " in the textbox below the question. After the submit button is "
             "clicked, the learner's answer is evaluated and several types of "
             "feedback are provided:</p>"
             "<p><ul><li><em>Approved Answer</em>: the IRB-approved response to "
             "this question on the official FAQ</li>"
-            "<li><em>Approved Answer Notes:</em>notes taken directly from the "
+            "<li><em>Approved Answer Notes:</em> notes taken directly from the "
             "official Copy Respository (not all answers have notes)</li>"
             "<li><em>Score</em>: Appearing below the learner's answer, the "
             "score consists of a percentage and a interpretation. The "
@@ -392,7 +393,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             "Semantic Textual Similarity task in the HuggingFace InferenceAPI."
             "The interpretive label below the score were created for this "
             "demo.</li>"
-            "<li><em>Watch Your Phrasing Alert:</em>regex is used to match "
+            "<li><em>Watch Your Phrasing Alert:</em> regex is used to match "
             "strings to the learner's answer. The strings are an unofficial "
             "list of words and phrases that the program has asked staff to "
             "avoid (the demo list includes only 'research subjects' and "
@@ -402,7 +403,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             "call to OpenAI API that uses a ChatGPT model to generate a "
             "paragraph describing ways the learner's answer could be changed "
             "to become semantically closer to the approved answer.</li>"
-            "</ul></p>"
+            "</ul></p></div>"
             )
 
     demo.load(
