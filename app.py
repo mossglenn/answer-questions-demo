@@ -374,10 +374,12 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
                 interactive=False
             )
         with gr.Column():
+            gr.Button(elem_classes=["info-button"], value="", size="sm", icon='information-svgrepo-com.png')
             status_box = gr.HTML(visible=False)
 
     with gr.Row():  # feedback row
         with gr.Column(elem_classes=["center-box"]):
+            gr.Button(elem_classes=["info-button"], value="", size="sm", icon='information-svgrepo-com.png')
             score_box = gr.HTML(visible=False)
         with gr.Column():
             forbidden_box = gr.HTML(visible=False)
