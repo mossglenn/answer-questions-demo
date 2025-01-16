@@ -339,9 +339,10 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             "resources; getting the response may take several seconds</h4>")
 
     with gr.Row():
-        gr.Button(elem_classes=["info-button"], value="", size="sm", icon='information-svgrepo-com.png')
+        # gr.Button(elem_classes=["info-button"], value="", size="sm", icon='information-svgrepo-com.png')
         question_box = gr.HTML(
-            value="<div class='initial-text'>Selecting a question...</div>"
+            value="<div class='initial-text'>Selecting a question...</div>",
+            elem_classes=["info-question"]
         )
 
     with gr.Row():

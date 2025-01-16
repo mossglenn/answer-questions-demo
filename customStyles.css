@@ -2,6 +2,11 @@
   max-width: 32px !important;
   min-width: 32px !important;
 }
+
+.info-question::before {
+content: ℹ️;
+}
+
 .box-with-border textarea {
   border: inherit;
 }
