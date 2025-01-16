@@ -3,6 +3,11 @@
   min-width: 32px !important;
 }
 
+.question-text{
+  font-size: large;
+  font-weight: bold;
+}
+
 .info-question:hover {
   border: 1px solid red;
   float: left;
