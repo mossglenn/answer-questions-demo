@@ -331,34 +331,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
 
     gr.HTML("<h1 style='text-align:center;'>Answering Questions Demo</h1>")
     gr.HTML("<h4>NB: This demo runs on minimal resources; getting the "
-            "response may take several seconds</h4>"
-            "This is a proof-of-concept demo for a learning activity. "
-            "A question is randomly "
-            "chosen from an official FAQ. The learner writes their response "
-            "in the textbox below the question. After the submit button is "
-            "clicked, the learner's answer is evaluated and several types of "
-            "feedback are provided."
-            "<ul><li><em>Approved Answer</em>: the IRB-approved response to "
-            "this question on the official FAQ</li>"
-            "<li><em>Approved Answer Notes:</em>notes taken directly from the "
-            "official Copy Respository (not all answers have notes)</li>"
-            "<li><em>Score></em>: Appearing below the learner's answer, the "
-            "score consists of a percentage and a interpretation. The "
-            "percentage is based on the similarity score resulting from the "
-            "Semantic Textual Similarity task in the HuggingFace InferenceAPI."
-            "The interpretive label below the score were created for this "
-            "demo.</li>"
-            "<li><em>Watch Your Phrasing Alert:</em>regex is used to match "
-            "strings to the learner's answer. The strings are an unofficial "
-            "list of words and phrases that the program has asked staff to "
-            "avoid (the demo list includes only 'research subjects' and "
-            "'human subjects'). The alert box appears when a match is found "
-            "and the matching strings are listed.</li>"
-            "<li><em>Suiggestions for Improvement</em>: the results of a "
-            "call to OpenAI API that uses a ChatGPT model to generate a "
-            "paragraph describing ways the learner's answer could be changed "
-            "to become semantically closer to the approved answer.</li>"
-            )
+            "response may take several seconds</h4>")
 
     question_box = gr.HTML(
         value="<div class='initial-text'>Selecting a question...</div>"
@@ -401,6 +374,35 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
         with gr.Column():
             forbidden_box = gr.HTML(visible=False)
             suggestion_box = gr.HTML(visible=False)
+
+    gr.HTML(
+            "This is a proof-of-concept demo for a learning activity. "
+            "A question is randomly "
+            "chosen from an official FAQ. The learner writes their response "
+            "in the textbox below the question. After the submit button is "
+            "clicked, the learner's answer is evaluated and several types of "
+            "feedback are provided."
+            "<ul><li><em>Approved Answer</em>: the IRB-approved response to "
+            "this question on the official FAQ</li>"
+            "<li><em>Approved Answer Notes:</em>notes taken directly from the "
+            "official Copy Respository (not all answers have notes)</li>"
+            "<li><em>Score></em>: Appearing below the learner's answer, the "
+            "score consists of a percentage and a interpretation. The "
+            "percentage is based on the similarity score resulting from the "
+            "Semantic Textual Similarity task in the HuggingFace InferenceAPI."
+            "The interpretive label below the score were created for this "
+            "demo.</li>"
+            "<li><em>Watch Your Phrasing Alert:</em>regex is used to match "
+            "strings to the learner's answer. The strings are an unofficial "
+            "list of words and phrases that the program has asked staff to "
+            "avoid (the demo list includes only 'research subjects' and "
+            "'human subjects'). The alert box appears when a match is found "
+            "and the matching strings are listed.</li>"
+            "<li><em>Suiggestions for Improvement</em>: the results of a "
+            "call to OpenAI API that uses a ChatGPT model to generate a "
+            "paragraph describing ways the learner's answer could be changed "
+            "to become semantically closer to the approved answer.</li>"
+            )
 
     demo.load(
         fn=printQuestion,
