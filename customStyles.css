@@ -3,7 +3,9 @@
   min-width: 32px !important;
 }
 
-
+.info-question:hover {
+  border: 1px solid red;
+}
 
 .box-with-border textarea {
   border: inherit;
