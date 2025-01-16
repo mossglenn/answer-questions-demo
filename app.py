@@ -376,17 +376,17 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             suggestion_box = gr.HTML(visible=False)
 
     gr.HTML(
-            "This is a proof-of-concept demo for a learning activity. "
+            "<p>This is a proof-of-concept demo for a learning activity. "
             "A question is randomly "
             "chosen from an official FAQ. The learner writes their response "
             "in the textbox below the question. After the submit button is "
             "clicked, the learner's answer is evaluated and several types of "
-            "feedback are provided."
-            "<ul><li><em>Approved Answer</em>: the IRB-approved response to "
+            "feedback are provided:</p>"
+            "<p><ul><li><em>Approved Answer</em>: the IRB-approved response to "
             "this question on the official FAQ</li>"
             "<li><em>Approved Answer Notes:</em>notes taken directly from the "
             "official Copy Respository (not all answers have notes)</li>"
-            "<li><em>Score></em>: Appearing below the learner's answer, the "
+            "<li><em>Score</em>: Appearing below the learner's answer, the "
             "score consists of a percentage and a interpretation. The "
             "percentage is based on the similarity score resulting from the "
             "Semantic Textual Similarity task in the HuggingFace InferenceAPI."
@@ -402,6 +402,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             "call to OpenAI API that uses a ChatGPT model to generate a "
             "paragraph describing ways the learner's answer could be changed "
             "to become semantically closer to the approved answer.</li>"
+            "</ul></p>"
             )
 
     demo.load(
