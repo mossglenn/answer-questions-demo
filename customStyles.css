@@ -1,5 +1,5 @@
 .info-button {
-  max-width: fit-content;
+  max-width: 16px;
 }
 .box-with-border textarea {
   border: inherit;
