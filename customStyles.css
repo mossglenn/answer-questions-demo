@@ -3,7 +3,7 @@
   min-width: 32px !important;
 }
 
-.info-question::before {
+.info-question h2::before {
 content: ℹ️;
 }
 
