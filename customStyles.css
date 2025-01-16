@@ -5,6 +5,7 @@
 
 .info-question:hover {
   border: 1px solid red;
+  float: left;
 }
 
 .box-with-border textarea {
