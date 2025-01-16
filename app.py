@@ -334,7 +334,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             "resources; getting the response may take several seconds</h4>")
 
     with gr.Group(elem_classes=["group_question"]):
-        gr.HTML("<img src='file/information-svgrepo-com.png' />")
+        gr.HTML("<img src='/file=information-svgrepo-com.png' />")
         question_box = gr.HTML(
             value="<div class='initial-text'>Selecting a question...</div>"
         )
