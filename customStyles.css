@@ -26,6 +26,10 @@ a.tooltip:after{
 a.tooltip:hover:after{ visibility: visible; opacity: 1; bottom: 20px; }
 
 
+.highlight-section:hover {
+  border: 1px dashed orange;
+}
+
 .info-button {
   max-width: 32px !important;
   min-width: 32px !important;

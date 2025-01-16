@@ -342,6 +342,8 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
         # gr.Button(elem_classes=["info-button"], value="", size="sm", icon='information-svgrepo-com.png')
         question_box = gr.HTML(
             value="<div class='initial-text'>Selecting a question...</div>",
+            label="Question Section",
+            elem_classes=['highlight-section']
         )
 
     with gr.Row():
