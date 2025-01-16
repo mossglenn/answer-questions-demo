@@ -3,9 +3,7 @@
   min-width: 32px !important;
 }
 
-.info-question h2::before {
-content: ℹ️;
-}
+
 
 .box-with-border textarea {
   border: inherit;

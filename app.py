@@ -119,7 +119,7 @@ def dump(state):
 
 
 def printQuestion(state):
-    return f"<h2>{state['question']}</h2>"
+    return f"ℹ️<h2>{state['question']}</h2>"
 
 
 def printScoreCard(state):
