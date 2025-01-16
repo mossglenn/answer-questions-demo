@@ -119,7 +119,7 @@ def dump(state):
 
 
 def printQuestion(state):
-    return f"<a href='#' class='tooltip' tool-tips='A Sample tooltip'>&nabla; </a><span class='question-text'>{state['question']}</span>"
+    return f"<span class='question-text'>{state['question']}</span>"
 
 
 def printScoreCard(state):
