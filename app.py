@@ -114,7 +114,7 @@ def dump(state):
 
 
 def printQuestion(state):
-    return f"<h2>{state['question']}</h2><img src='information-svgrepo-com.svg' />"
+    return f"<h2>{state['question']}</h2>"
 
 
 def printScoreCard(state):
@@ -333,9 +333,11 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
     gr.HTML("<h4 style='text-align:center;'>NB: This demo runs on minimal "
             "resources; getting the response may take several seconds</h4>")
 
-    question_box = gr.HTML(
-        value="<div class='initial-text'>Selecting a question...</div>"
-    )
+    with gr.Group():
+        gr.HTML("<img src='information-svgrepo-com.svg' />")
+        question_box = gr.HTML(
+            value="<div class='initial-text'>Selecting a question...</div>"
+        )
     with gr.Row():
         attempt_box = gr.Textbox(
             label="Your answer:",
