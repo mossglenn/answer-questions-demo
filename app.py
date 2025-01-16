@@ -114,7 +114,7 @@ def dump(state):
 
 
 def printQuestion(state):
-    return f"<h2>{state['question']}</h2>"
+    return f"<h2>{state['question']}</h2><img src='information-svgrepo-com.svg' />"
 
 
 def printScoreCard(state):
