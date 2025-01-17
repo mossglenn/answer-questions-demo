@@ -329,27 +329,33 @@ def reset_question(state: dict):
 with gr.Blocks(css_paths="customStyles.css") as demo:
     state = gr.State(value=initialize_state_values())
 
-    gr.HTML(
-        "<div class='header'>"
-
-        "<div class='title-text'>Answering Questions Demo</div>"
-
-        "<div class='subtitle-text'>A learning activity for gaining <b>fluency</b> "
-        "and <b>confidence</b> when responding to participant questions</></div>"
-
-        "<div class='nota-bena'><b>Please Note</b>: This demo runs on minimal "
-        "(mostly free) resources.<br />It may take several seconds to respond "
-        "to a submission with feedback. </div>"
-
-        "<div class='instructions-text'><h4>Instructions</h4>"
-        "<p>A question is randomly "
-        "chosen from an official FAQ and the learner writes their response"
-        " in the textbox below the question. After the submit button is "
-        "clicked, the learner's answer is evaluated and several types of "
-        "feedback are provided.</p><a href='#discussion'>How does this work?</a></div>"
-
-        "</div>"
-        )
+    with gr.Row(elem_classes=['title-row']):
+        with gr.Column(elem_classes=['title-row-1']):
+            gr.HTML("<div class='title-text'>Answering Questions Demo</div>")
+        with gr.Column(elem_classes=['title-row-2']):
+            gr.HTML("<div class='subtitle-text'>A learning activity for "
+                    "gaining <b>fluency</b> and <b>confidence</b> when "
+                    "responding to participant questions</></div>"
+                    )
+    
+    with gr.Row(elem_classes=['heading-row']):
+        with gr.Column(elem_classes=['heading-row-1']):
+            gr.HTML("<div class='nota-bena'><b>Please Note</b>: This demo "
+                    "runs on minimal (mostly free) resources.<br />It may "
+                    "take several seconds to respond to a submission with "
+                    "feedback. </div>"
+                    )
+        with gr.Column(elem_classes=['heading-row-2']):
+            gr.HTML("<div class='instructions-text'><h4>Instructions</h4>"
+                    "<p>A question is randomly chosen from an official FAQ "
+                    "and the learner writes their response in the textbox "
+                    "below the question. After the submit button is clicked, "
+                    "the learner's answer is evaluated and several types of "
+                    "feedback are provided.</p>"
+                    "<a href='#discussion'>How does this work?</a></div>"
+                    )
+    with gr.Row():
+        gr.HTML("<div class='blocker-row'></div>")
 
     with gr.Row():
         question_box = gr.HTML(

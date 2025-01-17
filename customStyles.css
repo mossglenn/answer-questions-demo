@@ -1,36 +1,23 @@
-.header {
-  display: grid;
-  background-color: #8cc9ff;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
-    "quad1a quad2a"
-    "quad2a quad2b";
-  column-gap: 40px;
-}
 
 
 .title-text {
-  grid-area: quad1a;
   font-weight: 900;
   font-size: 1.6em;
   text-align: center;
 }
 
 .subtitle-text {
-  grid-area: quad1b;
   font-weight: 500;
   font-size: 1.2em;
   font-style: italic;
 }
 
 .nota-bena {
-  grid-area: quad2a;
 text-align: center;
 }
 
 .instructions-text {
-  grid-area: quad2b;
+  background-color: #8cc9ff;
 }
 
 .box-with-border textarea {
