@@ -1,5 +1,6 @@
 .header {
   display: grid;
+  background-color: #8cc9ff;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "col1 col2";
   column-gap: 40px;
@@ -9,13 +10,10 @@
 
 .header-col-1 {
 grid-area: col1;
-  background-color: lightcyan;
-
 }
 
 .header-col-2 {
 grid-area: col2;
-  background-color: lightblue;
 }
 
 .title-card {
@@ -25,6 +23,7 @@ grid-area: col2;
   border-width: 3px;
   padding: 10px;
   text-align: center;
+  margin: 10px;
 }
 
 .title-text {
