@@ -397,7 +397,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
 
     gr.HTML(
             "<div id='discussion'>"
-            "<div style='line-height: 150%;'><p>"
+            "<div style='line-height: 150%;'><h2>How Does This Work?</h2><p>"
             "This is a proof-of-concept demo for a learning activity. "
             "A question is randomly "
             "chosen from an official FAQ and the learner writes their response"
