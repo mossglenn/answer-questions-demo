@@ -1,3 +1,7 @@
+.form {
+  border: none !important;
+}
+
 .title-row {
   text-align: center;
 }
