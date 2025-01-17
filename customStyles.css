@@ -45,6 +45,13 @@ display: flex;
   padding-bottom: 20px;
 }
 
+.blocker-row {
+  display: block;
+  height: 20px;
+  background: rgb(234,88,12);
+  background: linear-gradient(180deg, rgba(234,88,12,0) 25%, rgba(234,88,12,0.5) 40%, rgba(234,88,12,1) 50%, rgba(234,88,12,0.5) 60%, rgba(234,88,12,0) 75%); 
+}
+
 .box-with-border textarea {
   border: inherit;
 }
