@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  border-bottom: 1px solid #ffffff;
 }
 
 .header-col-1 {
@@ -17,7 +18,7 @@
   border-radius: 10px;
   border-width: 3px;
   padding: 10px;
-  max-width: 50%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
