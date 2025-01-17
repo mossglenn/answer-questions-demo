@@ -340,8 +340,6 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
         "</div>"
         "</div>"
         )
-    gr.HTML("<div class='nota-bena'>NB: This demo runs on minimal (mostly free)"
-            "resources, so getting the response may take several seconds</div></div>")
 
     with gr.Row():
         question_box = gr.HTML(

@@ -14,13 +14,13 @@
 }
 
 .subtitle-text {
-  font-weight: 700;
-  font-size: 1.2em;
+  font-weight: 500;
+  font-size: 1.1em;
   font-style: italic;
 }
 
 .nota-bena {
-  background-color: rgba(0, 0, 255, 0.3);
+  background-color: rgba(0, 0, 255, 0);
 }
 
 .box-with-border textarea {
