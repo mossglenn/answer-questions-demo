@@ -1,4 +1,4 @@
-.highlight-section:before {
+.highlight-section .highlight-section:before {
     content: "attr(label)";
     position:absolute;
     top:50%;
@@ -14,11 +14,11 @@
     display:none;
 }
 
-.highlight-section:hover {
+.highlight-section .highlight-section:hover {
   outline: 1px dashed orange;
 }
 
-.highlight-section:hover:before { 
+.highlight-section .highlight-section:hover:before { 
     display:block; 
 }
 
