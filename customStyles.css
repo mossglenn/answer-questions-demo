@@ -3,10 +3,9 @@
   border-color: #C2410C;
   border-radius: 10px;
   border-width: 3px;
-  padding: 3px;
+  padding: 20px;
   max-width: 50%;
-  margin: auto, 10px;
-}
+  margin: 0 auto;}
 
 .title-text {
   color: #000000;
