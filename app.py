@@ -410,7 +410,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
 
     gr.HTML(
             "<div id='discussion'>"
-            "<div style='line-height: 150%;'><h2>How Does This Work?</h2><p>"
+            "<h2>How Does This Work?</h2><p>"
             "This is a proof-of-concept demo for a learning activity. "
             "A question is randomly "
             "chosen from an official FAQ and the learner writes their response"
@@ -437,7 +437,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             "call to OpenAI API that uses a ChatGPT model to generate a "
             "paragraph describing ways the learner's answer could be changed "
             "to become semantically closer to the approved answer.</li>"
-            "</ul></p></div>"
+            "</ul></p>"
             "</div>"
             )
 
