@@ -11,7 +11,7 @@
 
 
 .title-text {
-  grid-area: qiad1a;
+  grid-area: quad1a;
   font-weight: 900;
   font-size: 1.6em;
   text-align: center;
@@ -25,7 +25,7 @@
 }
 
 .nota-bena {
-  grid-area: quar2a;
+  grid-area: quad2a;
 text-align: center;
 }
 
