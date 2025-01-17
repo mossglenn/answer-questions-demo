@@ -1,47 +1,18 @@
-.highlight-section .highlight-section:before {
-    content: "attr(label)";
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    left:100%;
-    margin-left:10px; /* Adjusted left margin */ 
-    width:120px;
-    padding:10px; /* Increased padding for better readability */ 
-    border-radius:3px; /* Slightly rounded corners */ 
-    background:#919191; /* Darker background color */ 
-    color: #fff;
-    text-align:center;
-    display:none;
+.title-card {
+  background-color: #27272A;
+  border-color: #C2410C;
+  border-radius: 10px;
+  border-width: 3px;
 }
 
-.highlight-section .highlight-section:hover {
-  outline: 1px dashed orange;
-}
-
-.highlight-section .highlight-section:hover:before { 
-    display:block; 
-}
-
-.info-button {
-  max-width: 32px !important;
-  min-width: 32px !important;
-}
-
-.question-text{
-  font-size: large;
-  font-weight: bold;
-}
-
-.info-question {
-  vertical-align: top;
+.title-text {
+  color: #ffffff;
   font-weight: 900;
-  color: orange;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
-.info-question:hover {
-  border: 1px solid red;
-  float: left;
+.nota-bena {
+  color: #cccccc;
 }
 
 .box-with-border textarea {

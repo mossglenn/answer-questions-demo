@@ -45,11 +45,6 @@ CONFIG = {
     },
 }
 
-infoIcon = ("<svg xmlns="'http://www.w3.org/2000/svg'" width='16' height='16' fill='currentColor' class='bi bi-info-circle' viewBox='0 0 16 16'>"
-            "<path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16'/>"
-            "<path d='m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0'/>"
-            "</svg>")
-
 try:
     client = InferenceClient()
 except Exception as e:
@@ -334,16 +329,20 @@ def reset_question(state: dict):
 with gr.Blocks(css_paths="customStyles.css") as demo:
     state = gr.State(value=initialize_state_values())
 
-    gr.HTML("<h1 style='text-align:center;'>Answering Questions Demo</h1>")
-    gr.HTML("<h4 style='text-align:center;'>NB: This demo runs on minimal "
-            "resources; getting the response may take several seconds</h4>")
+    gr.HTML(
+        "<div class='title-card'>"
+        "<div class='title-text'>Answering Questions Demo</div>"
+        "<div class='nota-bena'>NB: This demo runs on minimal (mostly free)"
+        "resources, so getting the response may take several seconds"
+        "</div>"
+        "</div>"
+        )
+    gr.HTML("<div class='nota-bena'>NB: This demo runs on minimal (mostly free)"
+            "resources, so getting the response may take several seconds</div></div>")
 
     with gr.Row():
-        # gr.Button(elem_classes=["info-button"], value="", size="sm", icon='information-svgrepo-com.png')
         question_box = gr.HTML(
-            value="<div class='initial-text'>Selecting a question...</div>",
-            label="Question Section",
-            elem_classes=['highlight-section']
+            value="<div class='initial-text'>Selecting a question...</div>"
         )
 
     with gr.Row():
