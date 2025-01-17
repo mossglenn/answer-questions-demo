@@ -14,17 +14,22 @@
 }
 
 .nota-bena {
-text-align: left;
+display: flex;
 }
 
-.instructions-text {
+.nb-icon {
+  flex-grow: 1;
+  font-size: 100%;
+}
+
+.heading-row-2 {
   border: 1px solid #ea580c;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
 }
 
-.tester-text {
+.heading-row-1 {
   border: 1px solid rgb(12, 29, 221);
   padding-left: 20px;
   padding-right: 20px;
