@@ -354,7 +354,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
                     "<a href='#discussion'>How does this work?</a>"
                     "<div class='nota-bena'><p><b>Please Note</b>: This demo "
                     "runs on minimal (mostly free) resources.<br />It may "
-                    "take several seconds to respond to a submission with "
+                    "take several seconds ⏱️ to respond to a submission with "
                     "feedback. </div>"
                     )
  
