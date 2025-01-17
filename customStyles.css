@@ -25,7 +25,12 @@ a.tooltip:after{
 
 a.tooltip:hover:after{ visibility: visible; opacity: 1; bottom: 20px; }
 
-
+.highlight-section {
+  border-color: hsla(0, 0, 0, 0);
+  border-width: 1px;
+  border-style: dashed;
+  
+}
 .highlight-section:hover {
   border: 1px dashed orange;
 }
