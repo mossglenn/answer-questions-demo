@@ -47,10 +47,8 @@ display: flex;
 
 }
 
-.blocker-row {
-  }
-
 .question-text {
+  margin-top: 20px;
   font-size: large;
   font-weight: bold;
 }

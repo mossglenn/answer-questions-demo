@@ -114,7 +114,7 @@ def dump(state):
 
 
 def printQuestion(state):
-    return f"<div class='question-text'>{state['question']}</div>"
+    return f"<div class='question-text'>Q: {state['question']}</div>"
 
 
 def printScoreCard(state):
