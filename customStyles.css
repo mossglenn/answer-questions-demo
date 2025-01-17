@@ -53,6 +53,10 @@ display: flex;
   font-weight: bold;
 }
 
+.thinking-face {
+  font-size: 150%;
+}
+
 .box-with-border textarea {
   border: inherit;
 }
