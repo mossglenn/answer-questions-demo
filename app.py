@@ -330,6 +330,8 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
     state = gr.State(value=initialize_state_values())
 
     gr.HTML(
+        "<div class='header'>"
+        "<div class='header-col-1'>"
         "<div class='title-card'>"
         "<div class='title-text'>Answering Questions Demo</div>"
         "<div class='subtitle-text'>A learning activity for gaining fluency "
@@ -338,6 +340,15 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
         "<div class='nota-bena'>Please Note: This demo runs on minimal "
         "(mostly free) resources. It may take several seconds to respond "
         "to a submission with feedback. </div>"
+        "</div>"
+        "<div class='header-col-2'>"
+        "<div class='instructions-text'><h4>Instructions</h4>"
+        "A question is randomly "
+        "chosen from an official FAQ and the learner writes their response"
+        " in the textbox below the question. After the submit button is "
+        "clicked, the learner's answer is evaluated and several types of "
+        "feedback are provided.</div>"
+        "</div>"
         )
 
     with gr.Row():
