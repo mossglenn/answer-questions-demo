@@ -20,9 +20,8 @@ display: flex;
 .nb-icon {
   display: block;
   flex-grow: 1;
-    height: 15vh;
-    font-size: 15vh;
-    line-height: 15vh;}
+  font-size: 2rem;
+  }
 
 .heading-row-2 {
   border: 1px solid #ea580c;
