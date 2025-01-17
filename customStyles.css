@@ -19,6 +19,7 @@ text-align: center;
 
 .instructions-text {
   background-color: #8cc9ff;
+  padding: 20px;
 }
 
 .box-with-border textarea {
