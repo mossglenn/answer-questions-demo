@@ -18,11 +18,11 @@
   font-weight: 500;
   font-size: 1.1em;
   font-style: italic;
-  padding-bottom: 20px;
 }
 
 .nota-bena {
-  background-color: rgba(0, 0, 255, 0.1);
+margin-top: 20px;
+text-align: center;
 }
 
 .box-with-border textarea {
