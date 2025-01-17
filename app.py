@@ -332,6 +332,8 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
     gr.HTML(
         "<div class='title-card'>"
         "<div class='title-text'>Answering Questions Demo</div>"
+        "<div class='subtitle-text'>A learning activity for gaining fluency "
+        "and confidence when responding to participant questions</>"
         "<div class='nota-bena'>NB: This demo runs on minimal (mostly free) "
         "resources. It may take up to sixty seconds to wake up and respond "
         "to a submission with feedback"
