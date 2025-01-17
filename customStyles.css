@@ -4,7 +4,7 @@
   grid-template-areas: "col1 col2";
   column-gap: 40px;
   justify-items: center;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 2px solid #FEFEFE;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }

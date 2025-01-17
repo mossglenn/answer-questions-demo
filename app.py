@@ -334,8 +334,8 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
         "<div class='header-col-1'>"
         "<div class='title-card'>"
         "<div class='title-text'>Answering Questions Demo</div>"
-        "<div class='subtitle-text'>A learning activity for gaining fluency "
-        "and confidence when responding to participant questions</></div>"
+        "<div class='subtitle-text'>A learning activity for gaining <b>fluency</b> "
+        "and <b>confidence</b> when responding to participant questions</></div>"
         "</div>"
         "<div class='nota-bena'><b>Please Note</b>: This demo runs on minimal "
         "(mostly free) resources.<br />It may take several seconds to respond "
@@ -347,7 +347,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
         "chosen from an official FAQ and the learner writes their response"
         " in the textbox below the question. After the submit button is "
         "clicked, the learner's answer is evaluated and several types of "
-        "feedback are provided.</p><a href='#'>How does this work?</a></div>"
+        "feedback are provided.</p><a href='#discussion'>How does this work?</a></div>"
         "</div>"
         )
 
@@ -396,6 +396,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             suggestion_box = gr.HTML(visible=False)
 
     gr.HTML(
+            "<div id='discussion'>"
             "<div style='line-height: 150%;'><p>"
             "This is a proof-of-concept demo for a learning activity. "
             "A question is randomly "
@@ -424,6 +425,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
             "paragraph describing ways the learner's answer could be changed "
             "to become semantically closer to the approved answer.</li>"
             "</ul></p></div>"
+            "</div>"
             )
 
     demo.load(
