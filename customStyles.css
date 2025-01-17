@@ -50,6 +50,11 @@ display: flex;
 .blocker-row {
   }
 
+.question-text {
+  font-size: large;
+  font-weight: bold;
+}
+
 .box-with-border textarea {
   border: inherit;
 }

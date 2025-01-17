@@ -114,7 +114,7 @@ def dump(state):
 
 
 def printQuestion(state):
-    return f"<span class='question-text'>{state['question']}</span>"
+    return f"<div class='question-text'>{state['question']}</div>"
 
 
 def printScoreCard(state):
@@ -360,9 +360,6 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
                     "feedback. </div>"
                     "</div>"
                     )
- 
-    with gr.Row():
-        gr.HTML("<div class='blocker-row'></div>")
 
     with gr.Row():
         question_box = gr.HTML(
