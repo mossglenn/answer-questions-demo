@@ -338,16 +338,20 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
     
     with gr.Row(elem_classes=['heading-row']):
         with gr.Column(elem_classes=['heading-row-2']):
-            gr.HTML("<div class='instructions-text'><h4>Instructions</h4>"
+            gr.HTML("<div class='instructions-text'>"
+                    "<h4>Instructions for Learners</h4>"
                     "<p>A question is randomly chosen from an official FAQ "
                     "and the learner writes their response in the textbox "
                     "below the question. After the submit button is clicked, "
                     "the learner's answer is evaluated and several types of "
                     "feedback are provided.</p>"
-                    "<a href='#discussion'>How does this work?</a></div>"
+                    
                     )
         with gr.Column(elem_classes=['heading-row-1']):
-            gr.HTML("<div class='nota-bena'><b>Please Note</b>: This demo "
+            gr.HTML("<div class='tester-text'>"
+                    "Check out the bottom of this page to read "
+                    "<a href='#discussion'>How does this work?</a>"
+                    "<div class='nota-bena'><b>Please Note</b>: This demo "
                     "runs on minimal (mostly free) resources.<br />It may "
                     "take several seconds to respond to a submission with "
                     "feedback. </div>"

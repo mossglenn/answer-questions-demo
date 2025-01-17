@@ -18,8 +18,13 @@ text-align: center;
 }
 
 .instructions-text {
-  background-color: #8cc9ff;
+  border: 1px solid #ea580c;
   padding: 20px;
+}
+
+.tester-text {
+  border: 1px solid cyan;
+  padding:  20px;
 }
 
 .box-with-border textarea {
