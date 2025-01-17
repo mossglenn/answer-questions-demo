@@ -2,45 +2,35 @@
   display: grid;
   background-color: #8cc9ff;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "col1 col2";
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "quad1a quad2a"
+    "quad2a quad2b";
   column-gap: 40px;
-  justify-items: center;
-  padding-bottom: 10px;
 }
 
-.header-col-1 {
-grid-area: col1;
-}
-
-.header-col-2 {
-grid-area: col2;
-}
-
-.title-card {
-  background-color: #ffffff;
-  border-color: #C2410C;
-  border-radius: 10px;
-  border-width: 3px;
-  padding: 10px;
-  text-align: center;
-  margin: 10px;
-}
 
 .title-text {
+  grid-area: qiad1a;
   font-weight: 900;
   font-size: 1.6em;
-  padding-bottom: 10px;
+  text-align: center;
 }
 
 .subtitle-text {
+  grid-area: quad1b;
   font-weight: 500;
   font-size: 1.2em;
   font-style: italic;
 }
 
 .nota-bena {
-margin-top: 20px;
+  grid-area: quar2a;
 text-align: center;
+}
+
+.instructions-text {
+  grid-area: quad2b;
 }
 
 .box-with-border textarea {
