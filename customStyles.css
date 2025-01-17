@@ -1,10 +1,5 @@
 
-.highlight-section {
-  border-color: hsla(0, 0, 0, 1);
-  border-width: 1px;
-  border-style: dashed;
-  
-}
+
 .highlight-section:hover {
   outline: 1px dashed orange;
 }
