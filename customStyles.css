@@ -1,18 +1,21 @@
 .title-card {
-  background-color: #27272A;
+  background-color: #ffffff;
   border-color: #C2410C;
   border-radius: 10px;
   border-width: 3px;
+  padding: 3px;
+  max-width: 50%;
+  margin: auto, 10px;
 }
 
 .title-text {
-  color: #ffffff;
+  color: #000000;
   font-weight: 900;
   font-size: 1.3em;
 }
 
 .nota-bena {
-  color: #cccccc;
+  color: #999999;
 }
 
 .box-with-border textarea {
