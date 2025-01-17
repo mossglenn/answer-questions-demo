@@ -1,22 +1,21 @@
 .header {
   display: grid;
-  background-color: lightcyan;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "col1 col2";
   column-gap: 40px;
   justify-items: center;
   padding-bottom: 10px;
-  margin-bottom: 10px;
-  margin-left: -20px;
-  margin-right: -20px;;
 }
 
 .header-col-1 {
 grid-area: col1;
+  background-color: lightcyan;
+
 }
 
 .header-col-2 {
 grid-area: col2;
+  background-color: lightblue;
 }
 
 .title-card {
