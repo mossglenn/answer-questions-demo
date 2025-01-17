@@ -1,32 +1,6 @@
-a.tooltip{
-  position: relative;
-  display: inline;
-}
-a.tooltip:after{
-  display: block;
-  visibility: hidden;
-  position: absolute;
-  bottom: 0;
-  left: 20%;
-  opacity: 0;
-  content: attr(tool-tips); /* might also use attr(title) */
-  height: auto;
-  min-width: 100px;
-  padding: 5px 8px;
-  z-index: 999;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-  background: rgba(0,0,0,0.85);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-a.tooltip:hover:after{ visibility: visible; opacity: 1; bottom: 20px; }
 
 .highlight-section {
-  border-color: hsla(0, 0, 0, 0);
+  border-color: hsla(100%, 0, 0, 0);
   border-width: 1px;
   border-style: dashed;
   
