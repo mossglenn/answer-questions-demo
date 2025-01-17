@@ -11,16 +11,18 @@
 .title-text {
   font-weight: 900;
   font-size: 1.5em;
+  padding-bottom: 20px;
 }
 
 .subtitle-text {
   font-weight: 500;
   font-size: 1.1em;
   font-style: italic;
+  padding-bottom: 20px;
 }
 
 .nota-bena {
-  background-color: rgba(0, 0, 255, 0);
+  background-color: rgba(0, 0, 255, 0.1);
 }
 
 .box-with-border textarea {
