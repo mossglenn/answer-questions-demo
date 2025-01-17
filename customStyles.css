@@ -2,7 +2,7 @@
   border-color: #C2410C;
   border-radius: 10px;
   border-width: 3px;
-  padding: 20px;
+  padding: 10px;
   max-width: 50%;
   margin: 0 auto;
   text-align: center;
@@ -11,7 +11,7 @@
 .title-text {
   font-weight: 900;
   font-size: 1.5em;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .subtitle-text {
