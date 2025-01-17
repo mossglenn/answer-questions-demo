@@ -330,13 +330,11 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
     state = gr.State(value=initialize_state_values())
 
     with gr.Row(elem_classes=['title-row']):
-        with gr.Column(elem_classes=['title-row-1']):
-            gr.HTML("<div class='title-text'>Answering Questions Demo</div>")
-        with gr.Column(elem_classes=['title-row-2']):
-            gr.HTML("<div class='subtitle-text'>A learning activity for "
-                    "gaining <b>fluency</b> and <b>confidence</b> when "
-                    "responding to participant questions</></div>"
-                    )
+        gr.HTML("<span class='title-text'>Answering Questions Demo: </span>"
+                "<span class='subtitle-text'>A learning activity for gaining "
+                "<b>fluency</b> and <b>confidence</b> when responding to "
+                "questions from participants</span>"
+                )
     
     with gr.Row(elem_classes=['heading-row']):
         with gr.Column(elem_classes=['heading-row-1']):
