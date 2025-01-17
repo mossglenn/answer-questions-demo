@@ -114,7 +114,10 @@ def dump(state):
 
 
 def printQuestion(state):
-    return f"<div class='question-text'><span class='thinking-face'>🤔</span> &ldquo;{state['question']}&rdquo;</div>"
+    return (
+        f"<div class='question-text'><span class='thinking-face'>🤔</span> "
+        f"&ldquo;{state['question']}&rdquo;</div>"
+    )
 
 
 def printScoreCard(state):
@@ -368,7 +371,7 @@ with gr.Blocks(css_paths="customStyles.css") as demo:
 
     with gr.Row():
         attempt_box = gr.Textbox(
-            label="Your answer:",
+            label="🖊️ Your answer:",
             lines=7,
             elem_classes=["box-with-border"]
         )
